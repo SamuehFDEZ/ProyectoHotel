@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="656.0" prefWidth="883.0" style="-fx-background-color: #414141;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotel.FourthController">
+   <children>
+      <ImageView fitHeight="706.0" fitWidth="922.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@mejor.gif" />
+         </image>
+      </ImageView>
+      <Label layoutX="391.0" layoutY="32.0" prefHeight="58.0" prefWidth="101.0" style="-fx-font-size: 40;" text="Pago" textAlignment="CENTER" textFill="#31eef2">
+         <font>
+            <Font size="30.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Label layoutX="205.0" layoutY="244.0" text="Fecha de caducidad" textFill="#31eef2">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Label layoutX="280.0" layoutY="348.0" text="CVV" textFill="#31eef2">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <TextField fx:id="fechaCaducidad" layoutX="200.0" layoutY="285.0" promptText="11/11" />
+      <Button layoutX="245.0" layoutY="474.0" mnemonicParsing="false" onAction="#pagar" prefHeight="54.0" prefWidth="111.0" style="-fx-text-fill: #31eef2; -fx-background-color: #4e3b31; -fx-font-size: 25;" stylesheets="@style.css" text="Pagar">
+         <effect>
+            <Bloom />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label layoutX="218.0" layoutY="119.0" prefHeight="32.0" prefWidth="183.0" text="Nº de la tarjeta" textFill="#31eef2">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <TextField fx:id="numTarjeta" layoutX="164.0" layoutY="169.0" prefHeight="26.0" prefWidth="273.0" promptText="1111-1111-1111-1111" />
+      <Label layoutX="370.0" layoutY="395.0" onMouseEntered="#interroganteDentro" onMouseExited="#interroganteFuera" prefHeight="32.0" prefWidth="0.0" style="-fx-font-size: 30;" text="?" textFill="#31eef2">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cvv" layoutX="262.0" layoutY="396.0" prefHeight="26.0" prefWidth="77.0" promptText="111" />
+      <Button layoutX="486.0" layoutY="168.0" mnemonicParsing="false" onAction="#numTarjetaAuto" style="-fx-background-color: #4e3b31;" text="Generar automaticamente">
+         <effect>
+            <Bloom />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button layoutX="539.0" layoutY="395.0" mnemonicParsing="false" onAction="#cvvRandom" prefHeight="39.0" prefWidth="146.0" style="-fx-background-color: #4e3b31;" text="Generar CVV">
+         <effect>
+            <Bloom />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button layoutX="533.0" layoutY="284.0" mnemonicParsing="false" onAction="#fechaRandom" style="-fx-background-color: #4e3b31;" text="Generar Fecha">
+         <effect>
+            <Bloom />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button layoutX="533.0" layoutY="474.0" mnemonicParsing="false" onAction="#Cancelar" prefHeight="54.0" prefWidth="136.0" style="-fx-font-size: 25; -fx-background-color: #4e3b31;" text="Cancelar">
+         <effect>
+            <Bloom />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Pane layoutX="-20.0" layoutY="-7.0" prefHeight="32.0" prefWidth="945.0" style="-fx-background-color: #31eef2;" stylesheets="@style.css">
+         <effect>
+            <Bloom />
+         </effect>
+         <children>
+            <Label layoutX="918.0" onMouseClicked="#salir" prefHeight="26.0" prefWidth="26.0" style="-fx-background-color: #4e3b31;" text="x" textFill="#31eef2">
+               <effect>
+                  <Bloom />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

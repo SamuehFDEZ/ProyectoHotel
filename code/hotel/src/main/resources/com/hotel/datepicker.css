@@ -1,0 +1,5 @@
+.date-cell:disabled {
+    -fx-opacity: 1;
+    -fx-text-fill: red /* Color de texto */
+
+}

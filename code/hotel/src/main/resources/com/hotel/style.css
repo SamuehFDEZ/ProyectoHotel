@@ -1,0 +1,53 @@
+.ImageView{
+  -fx-background-size: cover;
+
+}
+  
+  .label {
+    -fx-font-size: 22px; /* Tamaño de fuente */
+
+  }
+  
+  .text-field {
+    prompt-text-fill: #999999; /* Color de texto de marcador de posición */
+    -fx-font-size: 16px; /* Tamaño de fuente */
+    -fx-padding: 6px 8px;
+  }
+
+
+  .label, .button, .text-field {
+    -fx-alignment: center; /* Alineación al centro */
+  }
+
+  .text-field {
+    -fx-border-color: #31eef2; /* Color del borde del TextField */
+    -fx-border-width: 2px; /* Grosor del borde del TextField */
+    -fx-border-radius: 5px; /* Radio del borde del TextField */
+    -fx-background-radius: 5px; /* Radio del fondo del TextField */
+    -fx-padding: 6px 8px;
+
+  }
+  
+  .button {
+    -fx-text-fill: #31eef2; /* Color de texto */
+    -fx-font-size: 18px; /* Tamaño de fuente */
+    -fx-border-color: #31eef2; /* Color del borde del Button */
+    -fx-border-width: 2.5px; /* Grosor del borde del TextField */
+    -fx-border-radius: 20px; /* Radio del borde del Button */
+    -fx-background-radius: 20px; /* Radio del fondo del Button */
+    -fx-padding: 6px 8px;
+
+}
+
+.button:hover {
+  -fx-background-color: #31eef2; /* Color de fondo en hover */
+}
+
+.combo-box .list-cell {
+    -fx-background: #31eef2;
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-padding: 3 0 2 7;
+    -fx-cell-size: 1.66667em; 
+    -fx-background-radius: 5, 5, 4, 3;
+}

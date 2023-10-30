@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="751.0" maxWidth="1053.0" minHeight="500.0" minWidth="500.0" prefHeight="649.0" prefWidth="871.0" style="-fx-background-color: #414141;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotel.ThirdController">
+   <children>
+      <ImageView fitHeight="703.0" fitWidth="921.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@mejor.gif" />
+         </image>
+      </ImageView>
+      <Label layoutX="357.0" layoutY="24.0" prefHeight="49.0" prefWidth="200.0" style="-fx-font-size: 40;" text="Reservas" textAlignment="CENTER" textFill="#31eef2">
+         <font>
+            <Font size="45.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Label layoutX="242.0" layoutY="98.0" text="Ubicacion" textFill="#31eef2">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Label layoutX="612.0" layoutY="98.0" text="Hotel" textFill="#31eef2">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Button layoutX="62.0" layoutY="535.0" mnemonicParsing="false" onAction="#reserva" prefHeight="45.0" prefWidth="96.0" style="-fx-background-color: #4e3b31;" stylesheets="@style.css" text="Reserva">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Bloom />
+         </effect></Button>
+      <Label layoutX="743.0" layoutY="98.0" prefHeight="26.0" prefWidth="137.0" text="Nº Personas" textFill="#31eef2">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <TextField fx:id="numeroPeople" layoutX="776.0" layoutY="149.0" onAction="#textNumPeople" prefHeight="43.0" prefWidth="71.0" promptText="0" />
+      <DatePicker fx:id="fechaEntrada" layoutX="563.0" layoutY="311.0" prefHeight="43.0" prefWidth="151.0" promptText="dd-MM-yyyy" />
+      <ComboBox fx:id="hotel" editable="true" layoutX="561.0" layoutY="149.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#hotelSelector" prefHeight="43.0" prefWidth="186.0" promptText="Hotel" style="-fx-background-color: #4e3b31;" stylesheets="@combobox.css" />
+      <DatePicker fx:id="fechaSalida" layoutX="732.0" layoutY="311.0" prefHeight="43.0" prefWidth="137.0" promptText="dd-MM-yyyy" />
+      <Label layoutX="570.0" layoutY="259.0" text="Fecha Entrada" textFill="#31eef2">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Label layoutX="741.0" layoutY="259.0" text="Fecha Salida" textFill="#31eef2">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Button layoutX="391.0" layoutY="535.0" mnemonicParsing="false" onAction="#Cancelar" style="-fx-background-color: #4e3b31;" text="Cancelar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Bloom />
+         </effect></Button>
+      <Label layoutX="607.0" layoutY="374.0" text="Regimen de estancia" textFill="#31eef2">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <ComboBox fx:id="tipoDeRegimen" editable="true" layoutX="568.0" layoutY="419.0" onMouseClicked="#regimenSelector" prefHeight="43.0" prefWidth="279.0" promptText="Regimen" stylesheets="@combobox.css" />
+      <ImageView fitHeight="450.0" fitWidth="533.0" layoutX="14.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@mapaEspaØa.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="58.0" layoutX="205.0" layoutY="345.0" onMouseClicked="#sevilla" onMouseExited="#sevillaFuera" onMouseMoved="#sevillaDentro" stroke="TRANSPARENT" strokeType="INSIDE" width="158.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="58.0" layoutX="92.0" layoutY="396.0" onMouseClicked="#palmasCanaria" onMouseExited="#palmaCanariaFuera" onMouseMoved="#palmaCanariaDentro" stroke="TRANSPARENT" strokeType="INSIDE" width="71.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="58.0" layoutX="14.0" layoutY="396.0" onMouseClicked="#tenerife" onMouseExited="#tenerifeFuera" onMouseMoved="#tenerifeDentro" stroke="TRANSPARENT" strokeType="INSIDE" width="71.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="58.0" layoutX="257.0" layoutY="193.0" onMouseClicked="#valladolid" onMouseExited="#valladolidFuera" onMouseMoved="#valladolidDentro" stroke="TRANSPARENT" strokeType="INSIDE" width="63.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="51.0" layoutX="183.0" layoutY="159.0" onMouseClicked="#santiago" onMouseExited="#santiagoFuera" onMouseMoved="#santiagoDentro" stroke="TRANSPARENT" strokeType="INSIDE" width="54.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="18.0" layoutX="242.0" layoutY="161.0" onMouseClicked="#oviedo" onMouseExited="#oviedoFuera" onMouseMoved="#oviedoDentro" stroke="TRANSPARENT" strokeType="INSIDE" width="46.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="18.0" layoutX="307.0" layoutY="161.0" onMouseClicked="#santander" onMouseExited="#santanderFuera" onMouseMoved="#santanderDentro" stroke="TRANSPARENT" strokeType="INSIDE" width="23.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="18.0" layoutX="330.0" layoutY="170.0" onMouseClicked="#vitoria" onMouseExited="#vitoriaFuera" onMouseMoved="#vitoriaDentro" stroke="TRANSPARENT" strokeType="INSIDE" width="23.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="18.0" layoutX="363.0" layoutY="181.0" onMouseClicked="#pamplona" onMouseExited="#pamplonaFuera" onMouseMoved="#pamplonaDentro" stroke="TRANSPARENT" strokeType="INSIDE" width="23.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="18.0" layoutX="342.0" layoutY="201.0" onMouseClicked="#logroño" onMouseExited="#logroñoFuera" onMouseMoved="#logroñoDentro" stroke="TRANSPARENT" strokeType="INSIDE" width="23.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="18.0" layoutX="307.0" layoutY="257.0" onMouseClicked="#madrid" onMouseExited="#madridFuera" onMouseMoved="#madridDentro" stroke="TRANSPARENT" strokeType="INSIDE" width="23.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="58.0" layoutX="229.0" layoutY="285.0" onMouseClicked="#merida" onMouseExited="#meridaFuera" onMouseMoved="#meridaDentro" stroke="TRANSPARENT" strokeType="INSIDE" width="46.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="51.0" layoutX="284.0" layoutY="282.0" onDragDetected="#barcelonaDentro" onDragExited="#barcelonaFuera" onMouseClicked="#toledo" onMouseExited="#toledoFuera" onMouseMoved="#toledoDentro" stroke="TRANSPARENT" strokeType="INSIDE" width="89.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="21.0" layoutX="368.0" layoutY="345.0" onMouseClicked="#murica" onMouseExited="#muricaFuera" onMouseMoved="#muricaDentro" stroke="TRANSPARENT" strokeType="INSIDE" width="23.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="86.0" layoutX="391.0" layoutY="267.0" onMouseClicked="#valencia" onMouseExited="#valenciaFuera" onMouseMoved="#valenciaDentro" stroke="TRANSPARENT" strokeType="INSIDE" width="23.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="40.0" layoutX="425.0" layoutY="202.0" onDragEntered="#barcelonaDentro" onDragExited="#barcelonaFuera" onMouseClicked="#barcelona" onMouseExited="#barcelonaFuera" onMouseMoved="#barcelonaDentro" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="63.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="18.0" layoutX="477.0" layoutY="285.0" onMouseClicked="#palmaDeMallorca" onMouseExited="#balearesFuera" onMouseMoved="#balearesDentro" stroke="TRANSPARENT" strokeType="INSIDE" width="23.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="51.0" layoutX="368.0" layoutY="206.0" onMouseClicked="#zaragoza" onMouseExited="#zaragozaFuera" onMouseMoved="#zaragozaDentro" stroke="TRANSPARENT" strokeType="INSIDE" width="46.0" />
+      <Label layoutX="858.0" layoutY="412.0" onMouseEntered="#interroganteDentro" onMouseExited="#interroganteFuera" prefHeight="40.0" prefWidth="23.0" style="-fx-font-size: 40;" text="?" textFill="#31eef2">
+         <font>
+            <Font size="40.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Pane layoutX="-40.0" layoutY="-8.0" prefHeight="32.0" prefWidth="964.0" style="-fx-background-color: #31eef2;" stylesheets="@style.css">
+         <effect>
+            <Bloom />
+         </effect>
+         <children>
+            <Label layoutX="937.0" layoutY="2.0" onMouseClicked="#salir" prefHeight="26.0" prefWidth="26.0" style="-fx-background-color: #4e3b31;" text="x" textFill="#31eef2">
+               <effect>
+                  <Bloom />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

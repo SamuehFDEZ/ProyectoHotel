@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="710.0" prefWidth="961.0" style="-fx-background-color: #414141;" stylesheets="@table.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotel.SixthController">
+   <children>
+      <ImageView fitHeight="719.0" fitWidth="958.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@mejor.gif" />
+         </image>
+      </ImageView>
+      <Button layoutX="432.0" layoutY="627.0" mnemonicParsing="false" onAction="#volver" prefHeight="50.0" prefWidth="97.0" style="-fx-background-color: #4e3b31;" stylesheets="@style.css" text="Volver">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Bloom />
+         </effect>
+      </Button>
+      <Label layoutX="278.0" layoutY="24.0" prefHeight="58.0" prefWidth="461.0" style="-fx-font-size: 40;" text="Visualización de datos" textAlignment="CENTER" textFill="#31eef2">
+         <font>
+            <Font name="Arial Bold" size="40.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <TableView fx:id="table" layoutX="3.0" layoutY="82.0" prefHeight="532.0" prefWidth="952.0" style="-fx-background-color: #31eef2;">
+        <columns>
+          <TableColumn fx:id="idResTable" prefWidth="45.0" text="idRes" />
+          <TableColumn fx:id="numPersonasTable" prefWidth="83.0" text="numPersonas" />
+            <TableColumn fx:id="fehaInicioTable" prefWidth="79.0" text="fehaInicio" />
+            <TableColumn fx:id="fechaFinTable" prefWidth="74.0" text="fechaFin" />
+            <TableColumn fx:id="regimenTable" prefWidth="104.0" text="regimen" />
+            <TableColumn fx:id="numTarjetaTable" prefWidth="178.0" text="numTarjeta" />
+            <TableColumn fx:id="cvvTable" minWidth="0.0" prefWidth="39.0" text="cvv" />
+            <TableColumn fx:id="fechaCaducidadTable" prefWidth="110.0" text="fechaCaducidad" />
+            <TableColumn fx:id="nombreDeUsuarioTable" prefWidth="111.0" text="nombreDeUsuario" />
+            <TableColumn fx:id="nombreHotelTable" prefWidth="131.0" text="nombreHotel" />
+        </columns>
+         <effect>
+            <Blend />
+         </effect>
+      </TableView>
+      <Pane layoutY="-16.0" prefHeight="40.0" prefWidth="980.0" style="-fx-background-color: #31eef2;">
+         <effect>
+            <Bloom />
+         </effect>
+         <children>
+            <Label layoutX="902.0" layoutY="9.0" onMouseClicked="#salir" prefHeight="18.0" prefWidth="16.0" style="-fx-background-color: #4e3b31;" text="x" textFill="#31eef2">
+               <effect>
+                  <Bloom />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

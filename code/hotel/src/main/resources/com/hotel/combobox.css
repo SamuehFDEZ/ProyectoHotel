@@ -1,0 +1,10 @@
+.combo-box .list-cell {
+    -fx-background: #31eef2;
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-padding: 3 0 2 7;
+    -fx-cell-size: 1.66667em; 
+    -fx-background-radius: 5, 5, 4, 3;
+    -fx-text-alignment: left; /* Alineación al centro */
+
+}
